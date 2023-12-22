@@ -4,7 +4,7 @@ from numpy.random import seed, randint
 import matplotlib.pyplot as plt
 import numpy as np
 
-seg_len = 5
+seg_len = 4
 seg_num = 60
 
 sound_file = '72021001.wav'
