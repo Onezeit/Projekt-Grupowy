@@ -1,11 +1,6 @@
 from __future__ import division
 
 import sys
-
-sys.path.append('/home/hudi/anaconda2/lib/python2.7/site-packages/h5py')
-sys.path.append('/home/hudi/anaconda2/lib/python2.7/site-packages/Keras-2.0.6-py2.7.egg')
-
-
 import numpy as np
 from numpy.random import seed, randint
 from scipy.io import wavfile
@@ -19,11 +14,10 @@ from preprocess_sound import preprocess_sound
 
 
 def loading_data(files, sound_extractor):
-
     lines = linecache.getlines(files)
     sample_num = len(lines)
     seg_num = 60
-    seg_len = 5  # 5s
+    seg_len = 5  # 5 seconds
     data = np.zeros((seg_num * sample_num, 496, 64, 1))
     label = np.zeros((seg_num * sample_num,))
 
